@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1>Let Keyword</h1>
+</body>
+<script>
+    // let a=10;
+  
+    // if(true)
+    // {
+    //     // let a=20;
+    //     console.log(a);
+    // }
+
+    //--------We can use Hoisting with var but not with let.
+    // console.log(a);
+    // let a;
+
+
+    // when we give var then it will print 10 bcoz whole loop has been excuted but settimeout fun. execute after 1 second. so becoz of this var (global scope) it sets all i to 10. but in case of let, it is block scope so it will execute settimeout fun. in every i...so result is 0,1,2,3,...
+    for(let i=0;i<10;i++)
+    {
+        setTimeout(()=>{
+            console.log(i);
+        },1000);
+    }
+</script>
+</html>
