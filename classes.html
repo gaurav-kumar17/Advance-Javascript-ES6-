@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Arrow Function</h1>
+</body>
+
+    <script>
+        class Fruits{
+
+            name="orange";
+            constructor() 
+            // constructor is called automatically when object is created.
+            {
+                console.log("Hello ji",this.name);
+            }
+
+            getFruits(item)
+            {
+                // console.log("function");
+                return item;
+            }
+        }
+
+        let f1=new Fruits; // f1 is variable of Fruits data type.
+        // f1.getFruits();
+        console.log(f1.name)
+        console.log(f1.getFruits("mango"));
+    </script>
+</html>
