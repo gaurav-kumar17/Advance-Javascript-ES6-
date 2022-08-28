@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Arrow Function</h1>
+</body>
+<script>
+    let data=[10,20,30,40,50];
+    
+    // *************** Using normal function ************
+    // let newData=data.map(function(item){
+    //     return item*2;
+    // })
+    // console.log(newData);
+
+
+    // *************** Using Arrow function ************
+    // let newData=data.map((item)=>item*2)
+    // console.log(newData);
+
+    // function test()
+    // {
+    //     return 1;
+    // }
+
+    // let test2=function()
+    // {
+    //     return 1;
+    // }
+
+    // let test3=()=>{
+
+    //     return 1;
+    // }
+    // console.log(test2());
+    // console.log(test3());
+
+    let item={
+        name:"gaurav",
+        getName:function()
+        {
+            console.log(this);
+        },
+
+        getNameArrow:()=>{
+            // arrow func. ka apna "this" nahi hota hai that's why wo apne parent ka "this" use karta hai
+            console.log("arrow",this);
+        }
+    }
+    item.getName();
+    item.getNameArrow();
+</script>
+</html>
