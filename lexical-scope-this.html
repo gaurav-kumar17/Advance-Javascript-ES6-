@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Lexical scope means kisi chiz ka kitna scope hai -->
+
+    <!-- Lexical scope means that in a nested group of functions, the inner functions have access to the variables and other resources of their parent scope. -->
+
+    <!-- ---------OR---------- -->
+    <!-- a variable defined outside a function can be accessible inside another function defined after the variable declaration. -->
+    <h1>Lexical Scope for This</h1>
+</body>
+
+<script>
+    let data={
+        list:"friend",
+        names:['bruce','peter','sam'],
+
+        getFriend:function()
+        {
+            // console.log(this.names[2]);
+
+            // let that=this.list;
+            // this.names.map(function(item){
+            //     // console.log(this.list,item); can't use 'this' bcoz it lexical scope of this map function
+
+            //     console.log(that,item);
+            // })
+
+            // ---------OR----------
+            // use arrow function bcoz arrow func. doesn't have own this object it always uses parent this
+
+            this.names.map((item)=>{
+                console.log(this.list,item);
+            })
+        }
+    }
+
+    data.getFriend();
+</script>
+</html>
