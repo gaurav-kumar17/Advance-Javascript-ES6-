@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Unpacking array inside variables is called destructuring -->
+    <h1>Destructuring of Array</h1>
+</body>
+
+<script>
+    let fruits=['apple','mango','kiwi'];
+    // let [fruit1,,fruit3,fruit4 ='jkfdlsk']=fruits;
+    // console.log(fruit1);
+    // // console.log(fruit2);
+    // console.log(fruit3);
+    // console.log(fruit4);
+
+    // By using REST operator
+    let [fruit1,...fruitx]=fruits;
+    console.log(fruitx);
+</script>
+</html>
