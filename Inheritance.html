@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Inheritance</h1>
+</body>
+
+    <script>
+        class Category{ 
+
+            dryFruit()
+            {
+                return "Almond is dry fruit";
+            }
+            pomeFruit()
+            {
+                return "Apple is pome fruit";
+            }
+        }
+
+
+        // extends Category means it will inherit the property/methods of Category class.
+        class Fruits extends Category{  
+
+            constructor()
+            {
+                super(); 
+                // parent class ke constructor ko call karne ke liye we use super();
+
+                // The super() method refers to the parent class.
+
+                // By calling the super() method in the constructor method, we call the parent's constructor method and gets access to the parent's properties and methods.
+
+                console.log("constructor called");
+            }
+            getFruit()
+            {
+                return "you got orange";
+            }
+        }
+        let f1=new Fruits;
+        let c1=new Category;
+        console.log(f1.pomeFruit());
+        console.log(c1.dryFruit());
+    </script>
+</html>
