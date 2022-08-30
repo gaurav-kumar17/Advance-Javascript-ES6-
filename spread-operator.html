@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Spread Operator</h1>
+</body>
+<script>
+    // let otherFruits=['pineapple','guava'];
+    let fruits=['apple','mango','kiwi'];
+
+    // let newfruits=fruits;
+    // newfruits.push("test"); // test will be copied to both array bcoz reference of fruits is assigned to newfruits.
+
+    let newfruits=[...fruits]; // to avoid the assignment of reference we use spread operator.
+    newfruits.push("test");
+
+    // let allfruits=[...fruits,...otherFruits];  merge both arrays into new arrays.
+    console.log(newfruits)
+    console.log(fruits)
+
+
+    // function printall(...a)  // rest parameter
+    // {
+    //     console.log(a);
+    // }
+    // printall(fruits[0],fruits[1],fruits[2]);
+
+    // printall(...fruits); // spread parameter collect all arguments
+</script>
+
+</html>
