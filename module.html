@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- // Module allow us to use code of one file into another file. -->
+    <h1>Module</h1>
+</body>
+
+    <script type="module" defer>
+        import user,{userother as ouser,uservar,Userclass,uoc1} from './module.js'
+        // console.log(user());
+
+        function userother()
+        {
+            return "in current file";
+        }
+        user();
+        console.log(userother());
+        console.log(ouser());
+        console.log(uservar);
+
+        let uc1= new Userclass;
+        uc1.test();
+
+        uoc1.test();
+    </script>
+</html>
