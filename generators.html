@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Generators is basically a function only but we can resume and pause it that means if we have 20 lines of code in function and we want to use only first 10 lines only then we can use Generators -->
+    <h1>Generators</h1>
+    <button onclick="getstep()">Go step by step</button>
+</body>
+
+<script>
+    function* steps()  // * to define generator function
+    {
+        let a=10;
+        let b=20;
+        console.log(a+b);
+        yield 'step 1 completed'
+
+        console.log(a-b);
+        yield 'step 2 completed'
+
+        console.log(a*b);
+        yield 'step 3 completed'
+
+        return "all steps done";  // optional
+    }
+
+    let stp=steps();
+    function getstep()
+    {
+        console.log(stp.next()); // stp.next() means ek step tak run karke pause kar dega i.e we are calling the generator using next().
+    }
+
+</script>
+</html>
